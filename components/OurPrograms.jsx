@@ -5,7 +5,7 @@ import { WobbleCard } from "./ui/wobble-card";
 
 function OurPrograms() {
   return (
-    <div className="py-20">
+    <div className="py-20" id="programs">
       <div className="flex justify-center px-4 sm:px-6">
         <div className="border py-1 px-4 rounded-lg text-sm sm:text-base bg-background/50 backdrop-blur-sm">
           Our Programs

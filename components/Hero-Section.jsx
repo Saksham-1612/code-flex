@@ -2,19 +2,19 @@
 import { motion } from "motion/react";
 import HeroVideoDialog from "./magicui/hero-video-dialog";
 
-
 export default function HeroSection() {
+  const scrollToPrograms = () => {
+    const programsSection = document.getElementById('programs');
+    programsSection?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
-    <div
-    >
-      <div
-        className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 ">
-        <div
-          className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
+    <div>
+      <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 ">
+        <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
       </div>
       <div className="px-4 py-2 md:py-2">
-        <h1
-          className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl ">
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl ">
           {"Land your  job with confidence, not confusion"
             .split(" ")
             .map((word, index) => (
@@ -27,7 +27,8 @@ export default function HeroSection() {
                   delay: index * 0.1,
                   ease: "easeInOut",
                 }}
-                className="mr-2 inline-block">
+                className="mr-2 inline-block"
+              >
                 {word}
               </motion.span>
             ))}
@@ -43,8 +44,11 @@ export default function HeroSection() {
             duration: 0.3,
             delay: 0.8,
           }}
-          className="relative z-10 mx-auto max-w-2xl py-4 text-center text-lg font-normal text-neutral-600 ">
-          With our placement program, students go from learners to job-ready professionals. Get hands-on skills, interview prep, and the confidence to get hired.
+          className="relative z-10 mx-auto max-w-2xl py-4 text-center text-lg font-normal text-neutral-600 "
+        >
+          With our placement program, students go from learners to job-ready
+          professionals. Get hands-on skills, interview prep, and the confidence
+          to get hired.
         </motion.p>
         <motion.div
           initial={{
@@ -59,13 +63,12 @@ export default function HeroSection() {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4">
           <button
-            className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800 "
-            >
+            onClick={scrollToPrograms}
+            className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800"
+          >
             Explore Now
           </button>
-          <button
-            className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 "
-            >
+          <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 ">
             Contact Support
           </button>
         </motion.div>
@@ -82,16 +85,16 @@ export default function HeroSection() {
             duration: 0.3,
             delay: 1.2,
           }}
-          className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md ">
-          <div
-            className="w-full overflow-hidden rounded-xl border border-gray-300 ">
-              <HeroVideoDialog
-                className="block "
-                animationStyle="from-center"
-                videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
-                thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
-                thumbnailAlt="Hero Video"
-              />
+          className="relative z-10 mt-20 rounded-3xl border border-neutral-200 bg-neutral-100 p-4 shadow-md "
+        >
+          <div className="w-full overflow-hidden rounded-xl border border-gray-300 ">
+            <HeroVideoDialog
+              className="block "
+              animationStyle="from-center"
+              videoSrc="https://www.youtube.com/embed/qh3NGpYRG3I?si=4rb-zSdDkVK9qxxb"
+              thumbnailSrc="https://startup-template-sage.vercel.app/hero-light.png"
+              thumbnailAlt="Hero Video"
+            />
           </div>
         </motion.div>
       </div>
