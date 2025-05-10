@@ -40,34 +40,32 @@ function Instructors() {
       src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
-  return ( 
-
+  return (
     <section className="bg-background mt-20 mb-5 relative">
+      <div className="container z-10 mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
+        >
+          <div className="flex justify-center">
+            <div className="border py-1 px-4 rounded-lg">Instructors</div>
+          </div>
 
-    <div className="container z-10 mx-auto">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-        viewport={{ once: true }}
-        className="flex flex-col items-center justify-center max-w-[540px] mx-auto"
-      >
-        <div className="flex justify-center">
-          <div className="border py-1 px-4 rounded-lg">Instructors</div>
-        </div>
-
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
-          Our Instructors
-        </h2>
-        {/* <p className="text-center mt-5 opacity-75">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
+            Our Instructors
+          </h2>
+          {/* <p className="text-center mt-5 opacity-75">
           See what our customers have to say about us.
         </p> */}
-      </motion.div>
+        </motion.div>
 
-      <AnimatedInstructors testimonials={instructors} />
-    </div>
-  </section>
-);
+        <AnimatedInstructors testimonials={instructors} autoplay={true} />
+      </div>
+    </section>
+  );
 }
 
 export default Instructors;
