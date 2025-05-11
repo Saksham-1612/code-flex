@@ -1,10 +1,10 @@
 import { TextHoverEffect } from "@/components/ui/text-hover-effect";
 import Wrapper from "../components/Wrapper";
-import HeroSection from "@/components/Hero-Section";
-import TestimonialsSection from "@/components/Testimonial-Section";
-import Instructors from "@/components/Instructors";
-import PlacementStats from "@/components/PlacementStats";
-import OurPrograms from "@/components/OurPrograms";
+import HeroSection from "@/components/Main/Hero-Section";
+import TestimonialsSection from "@/components/Main/Testimonial-Section";
+import Instructors from "@/components/Main/Instructors";
+import PlacementStats from "@/components/Main/PlacementStats";
+import OurPrograms from "@/components/Main/OurPrograms";
 
 export default function Home() {
   return (

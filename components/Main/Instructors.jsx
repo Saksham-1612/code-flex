@@ -1,5 +1,5 @@
 "use client";
-import { AnimatedInstructors } from "./ui/animated-instructors";
+import { AnimatedInstructors } from "../ui/animated-instructors";
 import { motion } from "motion/react";
 
 function Instructors() {

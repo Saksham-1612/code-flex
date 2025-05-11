@@ -1,18 +1,15 @@
 "use client";
 import { motion } from "motion/react";
-import HeroVideoDialog from "./magicui/hero-video-dialog";
+import HeroVideoDialog from "../magicui/hero-video-dialog";
 
 export default function HeroSection() {
   const scrollToPrograms = () => {
-    const programsSection = document.getElementById('programs');
-    programsSection?.scrollIntoView({ behavior: 'smooth' });
+    const programsSection = document.getElementById("programs");
+    programsSection?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div>
-      <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 ">
-        <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-blue-500 to-transparent" />
-      </div>
       <div className="px-4 py-2 md:py-2">
         <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-bold text-slate-700 md:text-4xl lg:text-7xl ">
           {"Land your  job with confidence, not confusion"
@@ -61,7 +58,8 @@ export default function HeroSection() {
             duration: 0.3,
             delay: 1,
           }}
-          className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4">
+          className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
+        >
           <button
             onClick={scrollToPrograms}
             className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800"
