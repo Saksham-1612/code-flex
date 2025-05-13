@@ -1,8 +1,11 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { FaqSection } from "../ui/faq";
+import { ContactFormDialog } from "../ui/contact-form-dialog";
 
 function Faq() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <div>
       <FaqSection
@@ -13,9 +16,11 @@ function Faq() {
           title: "Still have questions?",
           description: "We're here to help you",
           buttonText: "Contact Support",
-          onContact: () => console.log("Contact support clicked"),
+          onContact: () => setIsContactOpen(true),
         }}
       />
+
+      <ContactFormDialog open={isContactOpen} onOpenChange={setIsContactOpen} />
     </div>
   );
 }

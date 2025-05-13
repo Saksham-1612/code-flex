@@ -5,41 +5,67 @@ import { motion } from "motion/react";
 function Instructors() {
   const instructors = [
     {
-      quote:
-        "The attention to detail and innovative features have completely transformed our workflow. This is exactly what we've been looking for.",
-      name: "Sarah Chen",
-      designation: "Product Manager at TechFlow",
-      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Expert in building scalable systems and cloud infrastructure",
+      name: "Saksham Arora",
+      designation: "Software Engineer 2 @ Intuit | Ex - Microsoft",
+      src: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=3560&auto=format&fit=crop",
     },
     {
-      quote:
-        "Implementation was seamless and the results exceeded our expectations. The platform's flexibility is remarkable.",
-      name: "Michael Rodriguez",
-      designation: "CTO at InnovateSphere",
-      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Specialized in data engineering and analytics solutions",
+      name: "Yugandhari Bodapati",
+      designation: "Data Engineer II @ Amazon",
+      src: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=3540&auto=format&fit=crop",
     },
     {
-      quote:
-        "This solution has significantly improved our team's productivity. The intuitive interface makes complex tasks simple.",
-      name: "Emily Watson",
-      designation: "Operations Director at CloudScale",
-      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Focused on developing enterprise-level applications",
+      name: "Harsh Vardhan",
+      designation: "Software Engineer @ Microsoft",
+      src: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=3540&auto=format&fit=crop",
     },
     {
-      quote:
-        "Outstanding support and robust features. It's rare to find a product that delivers on all its promises.",
-      name: "James Kim",
-      designation: "Engineering Lead at DataPro",
-      src: "https://images.unsplash.com/photo-1636041293178-808a6762ab39?q=80&w=3464&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Expert in blockchain technology and distributed systems",
+      name: "Sachin Raghuwanshi",
+      designation: "Software Engineer @ Coinbase",
+      src: "https://images.unsplash.com/photo-1623582854588-d60de57fa33f?q=80&w=2592&auto=format&fit=crop",
     },
     {
-      quote:
-        "The scalability and performance have been game-changing for our organization. Highly recommend to any growing business.",
-      name: "Lisa Thompson",
-      designation: "VP of Technology at FutureNet",
-      src: "https://images.unsplash.com/photo-1624561172888-ac93c696e10c?q=80&w=2592&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      quote: "Specialized in e-commerce and scalable platforms",
+      name: "Komal",
+      designation: "Software Engineer 2 @ Flipkart",
+      src: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=3540&auto=format&fit=crop",
+    },
+    {
+      quote: "Expert in cloud computing and system design",
+      name: "Megha Gupta",
+      designation: "Software Engineer @ Microsoft",
+      src: "https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?q=80&w=3542&auto=format&fit=crop",
+    },
+    {
+      quote: "Focused on developing innovative Microsoft solutions",
+      name: "Neha Pandey",
+      designation: "Software Engineer @ Microsoft",
+      src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=3541&auto=format&fit=crop",
+    },
+    {
+      quote: "Specialized in retail technology solutions",
+      name: "Bhavesh Vaswani",
+      designation: "Software Engineer 2 @ Walmart",
+      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=3540&auto=format&fit=crop",
+    },
+    {
+      quote: "Expert in financial technology and cloud systems",
+      name: "Arun Bhagat",
+      designation: "Software Engineer @ Microsoft | Ex - Goldman Sachs",
+      src: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=3540&auto=format&fit=crop",
+    },
+    {
+      quote: "Specialized in hardware and software integration",
+      name: "Anmol Punetha",
+      designation: "Senior Engineer @ Synopsys",
+      src: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=3540&auto=format&fit=crop",
     },
   ];
+
   return (
     <section className="bg-background mt-20 mb-5 relative">
       <div className="container z-10 mx-auto">
@@ -57,9 +83,6 @@ function Instructors() {
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold tracking-tighter mt-5">
             Our Instructors
           </h2>
-          {/* <p className="text-center mt-5 opacity-75">
-          See what our customers have to say about us.
-        </p> */}
         </motion.div>
 
         <AnimatedInstructors testimonials={instructors} autoplay={true} />
