@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import { FaqSection } from "../ui/faq";
-import { ContactFormDialog } from "../ui/contact-form-dialog";
+import { PlacementProgramForm } from "../ui/PlacementTrainingProgramForm";
 
 function Faq() {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -20,7 +20,10 @@ function Faq() {
         }}
       />
 
-      <ContactFormDialog open={isContactOpen} onOpenChange={setIsContactOpen} />
+      <PlacementProgramForm
+        open={isContactOpen}
+        onOpenChange={setIsContactOpen}
+      />
     </div>
   );
 }

@@ -1,9 +1,12 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "motion/react";
 import HeroVideoDialog from "../magicui/hero-video-dialog";
+import { PlacementProgramForm } from "../ui/PlacementTrainingProgramForm";
 
 function TrainingHero() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
     <div>
       <div>
@@ -56,9 +59,12 @@ function TrainingHero() {
             className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
           >
             <button className="w-60 transform rounded-lg bg-black px-6 py-2 font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-800">
-              Explore Now
+              Download Brochure
             </button>
-            <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 ">
+            <button 
+              onClick={() => setIsContactOpen(true)}
+              className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 "
+            >
               Contact Us
             </button>
           </motion.div>
@@ -89,6 +95,10 @@ function TrainingHero() {
           </motion.div>
         </div>
       </div>
+      <PlacementProgramForm 
+        open={isContactOpen} 
+        onOpenChange={setIsContactOpen} 
+      />
     </div>
   );
 }

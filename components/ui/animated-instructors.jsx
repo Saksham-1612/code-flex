@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import { Linkedin, LinkedinIcon, LucideLinkedin } from "lucide-react";
 
 export const AnimatedInstructors = ({
   testimonials,
@@ -142,7 +143,19 @@ export const AnimatedInstructors = ({
                 </motion.span>
               ))}
             </motion.p>
+
+            {testimonials[active].linkedin && (
+              <a
+                href={testimonials[active].linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 mt-4"
+              >
+                <LinkedinIcon className="h-5 w-5" />
+              </a>
+            )}
           </motion.div>
+
           <div className="flex gap-4 pt-12 md:pt-0">
             <button
               onClick={handlePrev}
