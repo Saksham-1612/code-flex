@@ -13,51 +13,55 @@ import {
 export function FeaturesSectionWithHoverEffects() {
   const features = [
     {
-      title: "Built for developers",
+      title: "Expert Mentorship",
       description:
-        "Built for engineers, developers, dreamers, thinkers and doers.",
+        "Students receive guidance from industry professionals who share real-world insights and align learning with market expectations.",
       icon: <IconTerminal2 />,
     },
     {
-      title: "Ease of use",
+      title: "Regular Evaluations",
       description:
-        "It's as easy as using an Apple, and as expensive as buying one.",
+        "Frequent assessments track performance, identify weak areas, and prepare students for placements.",
       icon: <IconEaseInOut />,
     },
     {
-      title: "Pricing like no other",
+      title: "Referral & Interview Prep",
       description:
-        "Our prices are best in the market. No cap, no lock, no credit card required.",
+        "Referral opportunities at top tech companies with company-wise tailored preparation strategies.",
       icon: <IconCurrencyDollar />,
     },
     {
-      title: "100% Uptime guarantee",
-      description: "We just cannot be taken down by anyone.",
+      title: "Hybrid & Online Learning",
+      description:
+        "Flexible training modes with live mentorship and access to a rich library of online resources.",
       icon: <IconCloud />,
     },
     {
-      title: "Multi-tenant Architecture",
-      description: "You can simply share passwords instead of buying new seats",
+      title: "Hands-On Training",
+      description:
+        "Industry-relevant projects ensure real-world exposure beyond traditional classroom learning.",
       icon: <IconRouteAltLeft />,
     },
     {
-      title: "24/7 Customer Support",
+      title: "Personalized Guidance",
       description:
-        "We are available a 100% of the time. Atleast our AI Agents are.",
+        "One-on-one mentorship sessions focused on student strengths, weaknesses, and aspirations.",
       icon: <IconHelp />,
     },
     {
-      title: "Money back guarantee",
+      title: "Company-Level Exposure",
       description:
-        "If you donot like EveryAI, we will convince you to like us.",
+        "Learn with real hiring insights from engineers at Microsoft, Amazon, Walmart, Flipkart, and more.",
       icon: <IconAdjustmentsBolt />,
     },
     {
-      title: "And everything else",
-      description: "I just ran out of copy ideas. Accept my sincere apologies",
+      title: "Campus Collaborations",
+      description:
+        "Trusted training partner with leading universities across India to bridge academia and industry.",
       icon: <IconHeart />,
     },
   ];
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4  relative z-10 py-10 max-w-7xl mx-auto">
       {features.map((feature, index) => (

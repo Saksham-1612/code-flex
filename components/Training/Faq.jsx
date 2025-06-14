@@ -12,12 +12,12 @@ function Faq() {
         title="Frequently Asked Questions"
         description="Everything you need to know about our platform"
         items={DEMO_FAQS}
-        contactInfo={{
-          title: "Still have questions?",
-          description: "We're here to help you",
-          buttonText: "Contact Support",
-          onContact: () => setIsContactOpen(true),
-        }}
+        // contactInfo={{
+        //   title: "Still have questions?",
+        //   description: "We're here to help you",
+        //   buttonText: "Contact Support",
+        //   onContact: () => setIsContactOpen(true),
+        // }}
       />
 
       <PlacementProgramForm
