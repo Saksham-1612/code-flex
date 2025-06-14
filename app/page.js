@@ -15,8 +15,8 @@ export default function Home() {
         <Image
           src="/CodeflexLogo.png"
           alt="codeflex"
-          width={100}
-          height={100}
+          width={120}
+          height={120}
         />
         <HeroSection />
         <Instructors />
