@@ -1,8 +1,11 @@
 "use client";
 import { motion } from "motion/react";
 import HeroVideoDialog from "../magicui/hero-video-dialog";
+import { useState } from "react";
+import { ContactForm } from "../ui/ContactForm";
 
 export default function HeroSection() {
+  const [isContactOpen, setIsContactOpen] = useState(false);
   const scrollToPrograms = () => {
     const programsSection = document.getElementById("programs");
     programsSection?.scrollIntoView({ behavior: "smooth" });
@@ -66,8 +69,11 @@ export default function HeroSection() {
           >
             Explore Now
           </button>
-          <button className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100 ">
-            Contact Support
+          <button
+            onClick={() => setIsContactOpen(true)}
+            className="w-60 transform rounded-lg border border-gray-300 bg-white px-6 py-2 font-medium text-black transition-all duration-300 hover:-translate-y-0.5 hover:bg-gray-100"
+          >
+            Contact Us
           </button>
         </motion.div>
         <motion.div
@@ -96,6 +102,7 @@ export default function HeroSection() {
           </div>
         </motion.div>
       </div>
+      <ContactForm open={isContactOpen} onOpenChange={setIsContactOpen} />
     </div>
   );
 }

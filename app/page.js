@@ -11,9 +11,8 @@ export default function Home() {
   return (
     <Wrapper>
       <div className="flex flex-col items-center">
-        {/* <TextHoverEffect text="CODEFLEX" /> */}
         <Image
-          src="/CodeflexLogo.png"
+          src="/CodeFlex.png"
           alt="codeflex"
           width={120}
           height={120}
